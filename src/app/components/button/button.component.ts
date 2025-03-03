@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'bruno-button',
@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ButtonComponent {
-  @Input() title = 'Button';
+  @Input() title = 'Button'
 }

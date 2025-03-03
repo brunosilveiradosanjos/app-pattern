@@ -14,7 +14,14 @@ module.exports = tseslint.config(
       ...angular.configs.tsRecommended,
     ],
     processor: angular.processInlineTemplates,
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: true,
+      },
+    },
     plugins: {
+      "@typescript-eslint": tseslint.plugin,
       "unused-imports": unusedImports,
     },
     rules: {
@@ -34,7 +41,7 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
-      "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+      "no-unused-vars": "off",
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": [
         "warn",
@@ -44,7 +51,9 @@ module.exports = tseslint.config(
           "args": "after-used",
           "argsIgnorePattern": "^_",
         },
-      ]
+      ],
+      // Use the base ESLint semi rule to remove semicolons
+      "semi": ["error", "never"]
     },
   },
   {

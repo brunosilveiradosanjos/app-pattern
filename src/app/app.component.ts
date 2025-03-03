@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ButtonComponent } from '@components/button/button.component';
+import { Component } from '@angular/core'
+import { ButtonComponent } from '@components/button/button.component'
 
 @Component({
   selector: 'app-root', // eslint-disable-line
@@ -9,5 +9,5 @@ import { ButtonComponent } from '@components/button/button.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'app-pattern';
+  title = 'app-pattern'
 }
